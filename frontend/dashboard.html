@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Tracker - Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>🎯 Job Tracker</h1>
+    <div>
+      <span id="welcome-text" style="margin-right:16px; color:#636e72;"></span>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <div class="dashboard-container">
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat-card">
+        <h2 id="total-count">0</h2>
+        <p>Total Applied</p>
+      </div>
+      <div class="stat-card">
+        <h2 id="interview-count">0</h2>
+        <p>Interviews</p>
+      </div>
+      <div class="stat-card">
+        <h2 id="offer-count">0</h2>
+        <p>Offers</p>
+      </div>
+      <div class="stat-card">
+        <h2 id="rejected-count">0</h2>
+        <p>Rejected</p>
+      </div>
+    </div>
+
+    <!-- Add Job Form -->
+    <div class="add-job-form">
+      <h2>➕ Add New Application</h2>
+      <div class="form-grid">
+        <input type="text" id="company" placeholder="Company Name" />
+        <input type="text" id="role" placeholder="Job Role" />
+        <select id="status">
+          <option value="Applied">Applied</option>
+          <option value="Interview">Interview</option>
+          <option value="Offer">Offer</option>
+          <option value="Rejected">Rejected</option>
+        </select>
+        <input type="text" id="notes" placeholder="Notes (optional)" />
+        <textarea id="jobDescription" placeholder="Paste Job Description here for AI analysis..."></textarea>
+      </div>
+      <div class="form-actions">
+        <button class="btn-add" onclick="addJob()">Add Application</button>
+        <button class="btn-ai" onclick="getAIAdvice()">🤖 Get AI Advice</button>
+      </div>
+    </div>
+
+    <!-- AI Advice Box -->
+    <div class="ai-advice" id="ai-advice-box">
+      <h3>🤖 AI Career Advice</h3>
+      <p id="ai-advice-text"></p>
+    </div>
+
+    <!-- Jobs List -->
+    <div class="jobs-section">
+      <h2>📋 Your Applications</h2>
+      <div class="jobs-grid" id="jobs-grid">
+        <p class="loading">Loading your applications...</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
