@@ -1,4 +1,4 @@
-const API = 'https://job-tracker-backend-014y.onrender.com';
+const API = 'https://job-tracker-backend-014y.onrender.com/api';
 
 // ==================
 // AUTH FUNCTIONS
