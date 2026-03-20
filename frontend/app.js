@@ -1,4 +1,4 @@
-const API = 'http://localhost:5000/api';
+const API = 'https://job-tracker-backend-014y.onrender.com';
 
 // ==================
 // AUTH FUNCTIONS
