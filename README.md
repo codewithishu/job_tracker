@@ -41,7 +41,7 @@ A full stack web application to track your job applications smartly with AI-powe
 
 1. Clone the repository
 \`\`\`bash
-git clone https://github.com/yourusername/job-tracker.git
+git clone https://github.com/yourusername/job_tracker.git
 cd job-tracker
 \`\`\`
 
